@@ -1,0 +1,15 @@
+[INFO ] 2020-11-25 15:46:38.211 [restartedMain] HrportalApplication - Starting HrportalApplication on LAPTOP-O70DIVO8 with PID 22560 (C:\hrportal\api\target\classes started by BRJD in C:\hrportal\api)
+[DEBUG] 2020-11-25 15:46:38.216 [restartedMain] HrportalApplication - Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+[INFO ] 2020-11-25 15:46:38.216 [restartedMain] HrportalApplication - The following profiles are active: dev
+[INFO ] 2020-11-25 15:46:50.705 [restartedMain] HrportalApplication - Starting HrportalApplication on LAPTOP-O70DIVO8 with PID 4644 (C:\hrportal\api\target\classes started by BRJD in C:\hrportal\api)
+[DEBUG] 2020-11-25 15:46:50.711 [restartedMain] HrportalApplication - Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+[INFO ] 2020-11-25 15:46:50.720 [restartedMain] HrportalApplication - The following profiles are active: dev
+[INFO ] 2020-11-25 15:47:04.166 [restartedMain] HrportalApplication - Starting HrportalApplication on LAPTOP-O70DIVO8 with PID 24052 (C:\hrportal\api\target\classes started by BRJD in C:\hrportal\api)
+[DEBUG] 2020-11-25 15:47:04.169 [restartedMain] HrportalApplication - Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+[INFO ] 2020-11-25 15:47:04.170 [restartedMain] HrportalApplication - The following profiles are active: dev
+[INFO ] 2020-11-25 15:49:21.761 [restartedMain] HrportalApplication - Started HrportalApplication in 138.108 seconds (JVM running for 139.452)
+[INFO ] 2020-11-25 15:55:50.832 [restartedMain] HrportalApplication - Starting HrportalApplication on LAPTOP-O70DIVO8 with PID 20900 (C:\hrportal\api\target\classes started by BRJD in C:\hrportal\api)
+[DEBUG] 2020-11-25 15:55:50.836 [restartedMain] HrportalApplication - Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+[INFO ] 2020-11-25 15:55:50.836 [restartedMain] HrportalApplication - The following profiles are active: dev
+[INFO ] 2020-11-25 15:58:11.415 [restartedMain] HrportalApplication - Started HrportalApplication in 141.149 seconds (JVM running for 142.448)
+[DEBUG] 2020-11-25 15:59:34.824 [http-nio-8080-exec-1] EmployeeController - Getting employees

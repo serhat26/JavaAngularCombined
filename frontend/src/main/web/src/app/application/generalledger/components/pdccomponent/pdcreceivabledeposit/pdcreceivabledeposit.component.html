@@ -1,0 +1,344 @@
+<div class="row p-4">
+    <div class="col-md-12">
+        <div class="card p-4">
+            <div *ngIf="!show">
+                <div class="card-header">
+                    <h4>Select Period and Voucher</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-3 mt-2">
+                            Period
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <select class="form-control">
+                                        <option *ngFor="let number of numbers">
+                                            {{number}}
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" value="01-Nov-2020">
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" value="30-Nov-2020">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-3 mt-2">
+                            Voucher Period
+                        </div>
+                        <div class="col-sm-9">
+                            <select class="form-control">
+                                <option value="1">T01- PDC RECEIVABLE</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div style="width: 300px; margin: auto;">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button class="btn btn-primary" (click)="showJV()">
+                                    Ok
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn btn-primary">
+                                    Save
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="show">
+                <div class="card-header">
+                    <h4>PDC Receivable-Deposits</h4>
+                    <hr />
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    Date
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Voucher
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <button class="btn btn-primary" style="width : 100%;margin-top: -8px;">
+                                Cancel
+                            </button>
+                            <button class="btn btn-primary" style="width : 100%;margin-top: -8px;">
+                                Select All
+                            </button>
+                        </div>
+                    </div>
+                    <br />
+                    <hr />
+                    <table style="overflow: auto;" class="table table-bordered">
+                        <thead>
+                            <th>Doc</th>
+                            <th>Doc. No</th>
+                            <th>Date</th>
+                            <th>GL Code</th>
+                            <th>SL Code</th>
+                            <th>Bank</th>
+                            <th>Bank SL</th>
+                            <th>Cheque</th>
+                            <th>Due Date</th>
+                            <th>AED Amount</th>
+                            <th>Amount</th>
+                            <th></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    GL Desc
+                                </div>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    SL Desc
+                                </div>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Bank
+                                </div>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Remarks
+                                </div>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Bank SL Desc
+                                </div>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

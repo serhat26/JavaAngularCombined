@@ -1,0 +1,66 @@
+# ===================================================================
+# Spring Boot configuration for the "dev" profile.
+#
+# This configuration overrides the application.yml file.
+# ===================================================================
+
+# ===================================================================
+# Standard Spring Boot properties.
+# Full reference is available at:
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# ===================================================================
+
+spring:
+  application:
+    name: 'hrportal'
+  profiles:
+    active: dev
+  jpa:
+    hibernate:
+      ddl-auto: update
+      hbm2ddl:
+        auto: validate
+    database: oracle
+    properties:
+      hibernate:
+        format_sql: true
+        default_schema: ORYX
+    show-sql: true
+  datasource:
+    url: jdbc:oracle:thin:@orclchv.czd6n4x3g2l8.eu-west-1.rds.amazonaws.com:1521:DATABASE
+    username: SPRING1
+    password: SSSpring123
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  jackson:
+    serialization:
+      indent-output: true
+    
+server:
+  port: 8080
+
+
+# ===================================================================
+# HrPortal specific properties
+# ===================================================================
+hrportal:  
+  # CORS is only enabled by default with the "dev" profile, so BrowserSync can access the API
+  cors:
+    allowed-origins: '*'
+    allowed-methods: '*'
+    allowed-headers: '*'
+    exposed-headers: 'Authorization,Link,X-Total-Count'
+    allow-credentials: true
+    max-age: 1800
+  security:
+    authentication:
+      jwt:
+        # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
+        base64-secret: NjRjNzYyNGYwYmYyMGNiMzMxZTI4ZjE3YTY4YWFhYTM5YTllZDQ2Njc2MmRkYTc4ZGYyNjJjMjAwM2NkMmM0YTZmNDBjZmZkNjExOWU5MzNlYWI0ZGEwNGYyZTM2NTJlNTA0ZTJlNzEwYzcwNGJhZGUzMzY5OWM2ZTY5NzlmNzc=
+        # Token is valid 24 hours
+        token-validity-in-seconds: 86400
+        token-validity-in-seconds-for-remember-me: 2592000
+  mail: # specific JHipster mail property, for standard properties see MailProperties
+    base-url: http://127.0.0.1:8080
+
+  clientApp:
+    name: Hr-portal Client

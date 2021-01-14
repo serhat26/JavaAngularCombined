@@ -1,0 +1,49 @@
+<configuration monitorinterval="60">
+    <properties>
+        <property name="log-path">C:/hrportal/logs</property>
+        <property name="archive">${log-path}/archive</property>
+    </properties>
+    <appenders>
+        <console name="Console-Appender" target="SYSTEM_OUT">
+            <patternlayout>
+                <pattern>
+                    [%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+                </pattern>>
+            </patternlayout>
+        </console>
+        <file name="File-Appender" filename="${log-path}/hrportal.log">
+            <patternlayout>
+                <pattern>
+                    [%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+                </pattern>
+            </patternlayout>
+        </file>
+        <rollingfile name="RollingFile-Appender" filename="${log-path}/hrportal-rolling.log"
+                     filepattern="${archive}/rollingfile.log.%d{yyyy-MM-dd-hh-mm}.gz">
+            <patternlayout pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n">
+                <policies>
+                    <timebasedtriggeringpolicy>
+                        <sizebasedtriggeringpolicy size="1 KB">
+                        </sizebasedtriggeringpolicy>
+                    </timebasedtriggeringpolicy>
+                </policies>
+                <defaultrolloverstrategy max="30">
+                </defaultrolloverstrategy>
+            </patternlayout>
+        </rollingfile>
+    </appenders>
+    <loggers>
+        <logger name="com.zenith.hrportal" level="info" additivity="false">E
+            <appenderref ref="File-Appender" level="info">
+                <appenderref ref="RollingFile-Appender" level="info">
+                    <appenderref ref="Console-Appender" level="warn">
+                    </appenderref>
+                </appenderref>
+            </appenderref>
+        </logger>
+        <root level="info">
+            <appenderref ref="Console-Appender">
+            </appenderref>
+        </root>
+    </loggers>
+</configuration>

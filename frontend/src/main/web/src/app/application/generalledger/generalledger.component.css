@@ -1,0 +1,36 @@
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+.dropdown-submenu ul {
+    display: none;
+}
+
+/* You can add global styles to this file, and also import other style files */
+.dropdown-item li {
+    padding-left: 15px;
+}
+
+.dropdown-submenu>ul {
+    display: none;
+}
+
+.middle-submenu-list ul {
+    display: none;
+}
+
+.dropdown-submenu:hover>ul,
+.middle-submenu-list:hover ul {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}

@@ -1,0 +1,579 @@
+<div class="row p-4">
+    <div class="col-md-12">
+        <div class="card p-4">
+            <div *ngIf="!show">
+                <div class="card-header">
+                    <h4>Select Period and Voucher</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-3 mt-2">
+                            Period
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <select class="form-control">
+                                        <option *ngFor="let number of numbers">
+                                            {{number}}
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" value="01-Nov-2020">
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" value="30-Nov-2020">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-3 mt-2">
+                            Voucher Period
+                        </div>
+                        <div class="col-sm-9">
+                            <select class="form-control">
+                                <option value="1">T01- PDC PAYABLES</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div style="width: 300px; margin: auto;">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button class="btn btn-primary" (click)="showJV()">
+                                    Ok
+                                </button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn btn-primary">
+                                    Save
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="show">
+                <div class="card-header">
+                    <h4>PDC Payables</h4>
+                    <hr />
+                </div>
+                <div class="card-body">
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <button class="btn btn-primary ml-auto">
+                                    Switch to BPV
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Costcenter
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    Date
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    GL Code
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    Amount
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Branch
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <button class="btn btn-primary">A/C Balance</button>
+                                </div>
+                                <div class="col-sm-6">
+                                    <button class="btn btn-primary">Settlement</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Bank
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    Amount
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Bank SL
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    Status
+                                </div>
+                                <div class="col-sm-8">
+                                    <select class="form-control">
+                                        <option value=""> On Hand</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Being
+                                </div>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    Deposit
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Paid To
+                                </div>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    Discount
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Cheque No.
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-3">
+                                    Cheque date
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <button style="margin-top: -8px;width: 100%;" class="btn btn-primary">
+                                ENBO-CHQ
+                            </button>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    Returned
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Create By
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-3">
+                                    Create on
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="text" value="26-Nov-2020" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <button style="margin-top: -8px;width: 100%;" class="btn btn-primary">
+                                Fields Location
+                            </button>
+                        </div>
+                    </div>
+                    <br />
+                    <hr />
+                    <table class="table table-bordered">
+                        <thead>
+                            <th>SN</th>
+                            <th>GL Code</th>
+                            <th>SL Code</th>
+                            <th>SL Desc</th>
+                            <th>Dr. Amount</th>
+                            <th>Cr. Amount</th>
+                            <th>Costcenter</th>
+                            <th>Area</th>
+                            <th>Cost Code</th>
+                            <th>Category</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <div class="row mt-2">
+                        <div class="col-sm-4">
+
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Total
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            Net Amt.
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <hr />
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Item Code
+                                </div>
+                                <div class="col-sm-7">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-sm-3">
+                                            Section
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Description
+                                </div>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-2">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Area Desc
+                                </div>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    GL Desc
+                                </div>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-2">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Costcode Desc
+                                </div>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    BOQ Description
+                                </div>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Item Desc
+                                </div>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Costcenter Desc
+                                </div>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-2">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Sec. Desc
+                                </div>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

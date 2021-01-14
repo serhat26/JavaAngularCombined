@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+.dropdown-item li {
+    padding-left: 15px;
+}
+
+ul>li+.dropdown-item {
+    display: none;
+}
+
+ul>li.active+.dropdown-item {
+    display: block;
+    list-style: none;
+}
+

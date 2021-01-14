@@ -1,0 +1,37 @@
+{"properties": [
+  {
+    "name": "hrportal.client-app.name",
+    "type": "java.lang.String",
+    "description": "A description for 'hrportal.client-app.name'"
+  },
+  {
+    "name": "hrportal.cors.allowed-origins",
+    "type": "java.lang.String",
+    "description": "A description for 'hrportal.cors.allowed-origins'"
+  },
+  {
+    "name": "hrportal.cors.allowed-methods",
+    "type": "java.lang.String",
+    "description": "A description for 'hrportal.cors.allowed-methods'"
+  },
+  {
+    "name": "hrportal.cors.allowed-headers",
+    "type": "java.lang.String",
+    "description": "A description for 'hrportal.cors.allowed-headers'"
+  },
+  {
+    "name": "hrportal.cors.exposed-headers",
+    "type": "java.lang.String",
+    "description": "A description for 'hrportal.cors.exposed-headers'"
+  },
+  {
+    "name": "hrportal.cors.allow-credentials",
+    "type": "java.lang.String",
+    "description": "A description for 'hrportal.cors.allow-credentials'"
+  },
+  {
+    "name": "hrportal.cors.max-age",
+    "type": "java.lang.String",
+    "description": "A description for 'hrportal.cors.max-age'"
+  }
+]}

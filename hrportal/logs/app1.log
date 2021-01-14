@@ -1,0 +1,5 @@
+[INFO ] 2020-11-25 11:59:45.705 [restartedMain] HrportalApplication - Starting HrportalApplication on LAPTOP-S2VL10A7 with PID 20996 (C:\projects\upwork\hrportal\hr_port_spring\target\classes started by brjdi in C:\projects\upwork\hrportal\hr_port_spring)
+[INFO ] 2020-11-25 11:59:45.709 [restartedMain] HrportalApplication - The following profiles are active: dev
+[INFO ] 2020-12-13 16:47:25.136 [restartedMain] HrportalApplication - Starting HrportalApplication on LAPTOP-S2VL10A7 with PID 5132 (C:\projects\upwork\hrportal\hr_port_spring\target\classes started by brjdi in C:\projects\upwork\hrportal\hr_port_spring)
+[INFO ] 2020-12-13 16:47:25.150 [restartedMain] HrportalApplication - The following profiles are active: dev
+[INFO ] 2020-12-13 16:48:27.857 [restartedMain] HrportalApplication - Started HrportalApplication in 63.856 seconds (JVM running for 67.893)
